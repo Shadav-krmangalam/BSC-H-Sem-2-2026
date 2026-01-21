@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading" class="headClass">KRMU-BSC </h1>
+    <div></div>
+    <p></p>
+
+    <div id="divInnerText">
+        Hello
+        <span style="display: none;">World</span>
+    </div>
+   
+    
+     
+    
+    
+
+    <script>
+
+        
+        let head = document.querySelector("h1")
+        let divs = document.querySelector("div")
+        let para1 = document.querySelector("p")
+        
+        head.innerText = "Hello"
+        head.style.color = "red"
+
+        divs.innerHTML=`<h1>hello Heading</h1>
+        <p>hello pargraph</p>
+        <span>hello  span</span>`
+
+
+        para1.innerText = `Hello 
+        
+        
+        
+        
+        para`
+
+        let innerDiv = document.querySelector("#divInnerText")
+  
+        console.log(innerDiv.innerText)
+        console.log(innerDiv.textContent)
+       
+
+      
+        // head.innerText = "Hello Students"
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let head = document.getElementById("heading")
+
+        // let head = document.getElementsByClassName("headClass")
+        // console.log(head)
+
+        // let head = document.getElementsByTagName("h1")
+        // console.log(head)
+
+
+        // let head = document.querySelector("h1")
+
+        // head.innerText = "Hello Students"
+        // head.style.color = "red"
+        // head.style.backgroundColor = "blue"
+        
+        // console.log(head.innerText)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+
+    <ul>
+
+    </ul>
+    <button>Add List Item</button>
+
+    <script>
+        let fruits = ["Apple","Mango","Kiwi","Watermelon",'Papaya']
+        let list = document.querySelector('ul')
+        let btn = document.querySelector('button')
+        let count = 0;
+
+        function addListItems(){
+            if(count<fruits.length){
+                  let li = document.createElement('li')
+            li.innerText = fruits[count]
+            list.append(li)
+            count++;
+            }else{
+                btn.removeEventListener('click',addListItems)
+            }
+       
+        }
+
+        btn.addEventListener('click',addListItems);
+    </script>
+    
+</body>
+</html>
