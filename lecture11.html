@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let cart = ["Shirt","t-Shirt","Pants","belt"]
+
+        function createOrder(cart,callback){
+            console.log('Creating Order For :',cart)
+            setTimeout(()=>{
+                let orderID = 1234
+                callback(orderID)
+
+            },5000)
+
+        }
+
+        function makePayment(orderID,callback){
+            console.log("Payment For : ",orderID);
+            setTimeout(()=>{
+                let ui = 10-1;
+                callback(ui)
+
+            },7000)
+        }
+
+        function updateInventory(ui,callback){
+            console.log("Products Remaining : ",ui);
+            setTimeout(()=>{
+                let message = "SUCCESS";
+                callback(message);
+
+            },3000)
+        }
+
+        function orderStatus(message){
+            console.log(message);
+        }
+
+        createOrder(cart,function(orderID){
+            makePayment(orderID,function(ui){
+                updateInventory(ui,function(message){
+                    orderStatus(message)
+
+                })
+
+            })
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

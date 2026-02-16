@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    
+    <script>
+        let resturant = "close";
+
+       let wada = new Promise((resolve,reject)=>{
+
+            if(resturant === "open"){
+                resolve("Pura Kiya Wada")
+            }else{
+                reject("Kya Hua tera wada")
+            }
+
+
+        })
+
+        // console.log(wada);
+
+      wada.then(disha=>console.log(disha)).catch(err=>console.log(err))
+
+    </script>
+</body>
+</html>
